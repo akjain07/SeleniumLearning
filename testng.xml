@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+ <!--functionality have been modularized by using "test" --> 
+
+  <test thread-count="5" name="Test">
+    <classes>
+     <class name="section16.Demo">
+     <methods> 
+     	<include name="secondMethod"></include>
+     </methods>
+     </class>
+     <class name="section16.Demo2"></class>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test name ="Test2">
+  	<classes>
+  	 <class name="section16.Demo3">
+  	 <methods>
+ <!--		to exclude a specific method from a class from running it --> 
+  	 	<exclude name="thirdMethod"></exclude>
+  	 </methods>
+  	 </class>
+     <class name="section16.Demo4">
+		     <methods>
+<!--using regular expression to remove all the methods that starts with 'reg' -->		      
+     	<exclude name="fourth.*"></exclude>
+     </methods>
+     </class>
+     <class name="section16.dataProvider"></class>
+  	</classes>
+  </test>
+</suite> <!-- Suite -->
