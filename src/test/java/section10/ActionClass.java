@@ -20,6 +20,7 @@ public class ActionClass {
 //		build() is used to compile a sequence of chained actions into a single executable unit when multiple actions are involved
 //		perform() is used to execute the defined actions
 //		moveToElement -> moves to specific element
+//		The contextClick() method in the Selenium Actions class is used to simulate a right-click action on a web element.
 		act.moveToElement(signIn).contextClick().build().perform();
 		
 		WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));

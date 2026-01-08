@@ -26,7 +26,10 @@ public class Frames {
 		System.out.println(iframeSize);
 		
 //		switching to an iframe using index
-		driver.switchTo().frame(0);
+//		driver.switchTo().frame(0);
+		
+//		switching to an iframe using WebElement
+		driver.switchTo().frame(driver.findElement(By.cssSelector("iframe.demo-frame")));
 		
 		Actions act=new Actions(driver);
 		
